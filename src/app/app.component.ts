@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   data2 = [1, 1, 2, 1, 1, 2, 1 ]
   data3 = [1, 3, 4 , 5, 2, 1, 1 ]
   ngOnInit() {
-    
+    this.plot();
   }
 
   plot() {
