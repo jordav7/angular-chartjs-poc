@@ -1,3 +1,7 @@
 p {
   font-family: Lato;
 }
+
+.canvas-inner {
+  min-width: 400px;
+}

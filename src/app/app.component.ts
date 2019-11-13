@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import Chart from 'chart.js';
+import Chartist from 'chartist';
 
 @Component({
   selector: 'my-app',
@@ -12,11 +13,13 @@ export class AppComponent implements OnInit {
   canvas: any;
   chart: Chart;
   ctx: any;  
-  data1 = [1, 2, 2, 7, 7, 8, 10]
-  data2 = [1, 1, 2, 1, 1, 2, 1 ]
-  data3 = [1, 3, 4 , 5, 2, 1, 1 ]
+  data1 = [1, 2, 2, 7, 7, 8, 10];
+  data2 = [1, 1, 2, 1, 1, 2, 1 ];
+  data3 = [1, 3, 4 , 5, 2, 1, 1 ];
+  velocPlot;
   ngOnInit() {
     this.plot();
+    this.plotVeloc();
   }
 
   plot() {
@@ -73,4 +76,16 @@ export class AppComponent implements OnInit {
 			}
 	  });
 	}
+
+  plotVeloc () {
+    this.velocPlot = new Chartist.Pie('.bi-veloc', {
+      series: [20, 10, 30, 40]
+    }, {
+      donut: true,
+      donutWidth: 60,
+      startAngle: 270,
+      total: 200,
+      showLabel: true
+    });
+  }
 }
