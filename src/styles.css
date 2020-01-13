@@ -1,1 +1,16 @@
 /* Add application styles & imports to this file! */
+
+/*make a color different to fill-donut series*/
+  .ct-chart-donut .ct-series-a .ct-slice-donut {
+      stroke: red;
+  }
+  /*make b hidden*/
+  .ct-chart-donut .ct-series-b .ct-slice-donut {
+      stroke: #efefef;
+      opacity: 0.0;
+  }
+  /*make all fill-donut series visible and set color*/
+  .ct-chart-donut .ct-fill-donut .ct-slice-donut{
+      stroke: #efefef;
+      opacity: 1;
+  }

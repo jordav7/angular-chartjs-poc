@@ -12,6 +12,7 @@
     "@angular/router": "^8.0.0",
     "chart.js": "^2.9.2",
     "chartist": "^0.11.4",
+    "chartist-plugin-fill-donut": "^0.1.4",
     "core-js": "2",
     "rxjs": "^6.5.2",
     "zone.js": "^0.9.1"
