@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import Chart from 'chart.js';
 import Chartist from 'chartist';
+import * as FillDonut from 'chartist-plugin-fill-donut';
+
+var fillDonut = FillDonut;
 
 @Component({
   selector: 'my-app',
@@ -17,6 +20,7 @@ export class AppComponent implements OnInit {
   data2 = [1, 1, 2, 1, 1, 2, 1 ];
   data3 = [1, 3, 4 , 5, 2, 1, 1 ];
   velocPlot;
+  velocFillPlot;
   ngOnInit() {
     this.plot();
     this.plotVeloc();
@@ -90,8 +94,8 @@ export class AppComponent implements OnInit {
     });
   }
 
-  plotFillVeloc() {
-    var chart = new Chartist.Pie('.bi-fill-veloc', 
+  plotFillVeloc() {    
+    this.velocFillPlot = new Chartist.Pie('#bi-fill-veloc', 
     {
         series: [160, 60 ],
         labels: ['', '']
@@ -115,7 +119,7 @@ export class AppComponent implements OnInit {
         ],
     });
 
-    chart.on('draw', function(data) {
+    this.velocFillPlot.on('draw', function(data) {
     if(data.type === 'slice' && data.index == 0) {
         // Get the total path length in order to use for dash array animation
         var pathLength = data.element._node.getTotalLength();
