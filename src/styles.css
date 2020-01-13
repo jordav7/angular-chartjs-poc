@@ -1,5 +1,4 @@
 /* Add application styles & imports to this file! */
-
 /*make a color different to fill-donut series*/
   .ct-chart-donut .ct-series-a .ct-slice-donut {
       stroke: red;

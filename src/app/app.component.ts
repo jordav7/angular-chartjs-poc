@@ -99,13 +99,13 @@ export class AppComponent implements OnInit {
     this.velocFillPlot = new Chartist.Pie('#bi-fill-veloc', 
     {
         series: [160, 60 ],
-        labels: ['', '']
+        labels: ['160', '60']
     }, {
         donut: true,
         donutWidth: 30,
         startAngle: 210,
         total: 260,
-        showLabel: false,
+        showLabel: true,
         plugins: [
             Chartist.plugins.fillDonut({
                 items: [{
